@@ -1,0 +1,229 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #007bff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #555 !important;
+    font-weight: 600;
+    padding: 12px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #007bff;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('Images/bosque.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero .container {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero .animate-btn {
+    transition: all 0.3s ease;
+}
+
+.hero .animate-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Destinos Populares */
+#popular-destinations {
+    background-color: #ffffff;
+}
+
+#popular-destinations h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Search Section */
+#search {
+    background-color: #f8f9fa;
+}
+
+#search h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#flight-search-form .form-control {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+#flight-search-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#flight-search-form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        padding: 10px 12px;
+    }
+
+    #popular-destinations h2 {
+        font-size: 2rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    #search h2 {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+}
+
+
+

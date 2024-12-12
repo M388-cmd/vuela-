@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra los mejores vuelos con SkyFlights. Planea tu próximo viaje con las mejores ofertas.">
+    <meta name="author" content="SkyFlights">
+    <meta name="keywords" content="vuelos baratos, viajes, vuelos, destino, oferta de vuelos">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SkyFlights - Encuentra tu próximo destino">
+    <meta property="og:description" content="Encuentra vuelos a los mejores precios a los destinos más populares del mundo.">
+    <meta property="og:url" content="https://www.skyflights.com">
+    <meta property="og:image" content="https://www.skyflights.com/Images/og-image.jpg">
+    <title>SkyFlights - Encuentra tu próximo destino</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold text-primary" href="#">SkyFlights</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación móvil">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#search">Buscar Vuelos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center text-white" role="banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="display-4 fw-bold">Explora Nuevas Fronteras</h1>
+            <p class="lead">Encuentra vuelos a los mejores precios y destinos.</p>
+            <button class="btn btn-primary btn-lg mt-4 animate-btn" onclick="scrollToSearch()">Buscar Vuelos</button>
+        </div>
+    </section>
+
+    <!-- Destinos Populares -->
+    <section id="popular-destinations" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Destinos Populares</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <img src="Images/paris.jpg" class="card-img-top" alt="París" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">París</h5>
+                            <p class="card-text">Explora la ciudad del amor con ofertas exclusivas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <img src="Images/tokyo.jpg" class="card-img-top" alt="Tokio" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokio</h5>
+                            <p class="card-text">Descubre la vibrante cultura de Japón.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <img src="Images/newyork.jpg" class="card-img-top" alt="Nueva York" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Nueva York</h5>
+                            <p class="card-text">Visita la ciudad que nunca duerme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Encuentra tu Vuelo</h2>
+            <form id="flight-search-form" class="row g-3 justify-content-center" role="form">
+                <div class="col-md-3">
+                    <input type="text" id="from" class="form-control" placeholder="Origen (IATA)" required aria-label="Código de aeropuerto de origen">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="to" class="form-control" placeholder="Destino (IATA)" required aria-label="Código de aeropuerto de destino">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" id="departure-date" class="form-control" required aria-label="Fecha de salida">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" id="return-date" class="form-control" placeholder="Fecha de Regreso" aria-label="Fecha de regreso">
+                </div>
+                <div class="col-md-12 text-center mt-3">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Buscar</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Sobre Nosotros</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="fw-bold">¿Quiénes Somos?</h4>
+                <p class="lead">SkyFlights es una plataforma dedicada a ofrecer las mejores ofertas en vuelos a nivel mundial. Nuestro objetivo es hacer que viajar sea más fácil y accesible, proporcionando una experiencia fluida y sin complicaciones desde la búsqueda hasta la compra del vuelo.</p>
+                <p>Contamos con un equipo apasionado por los viajes y la tecnología, comprometido con brindar el mejor servicio y las mejores ofertas. Nuestra plataforma está diseñada para ofrecer la mejor experiencia de usuario, desde un diseño moderno hasta un motor de búsqueda eficiente y fácil de usar.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="Images/team.jpg" alt="Nuestro equipo" class="img-fluid rounded-circle" style="max-width: 300px; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+   
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>Contáctanos: <a href="mailto:info@skyflights.com" class="text-warning">info@skyflights.com</a> | Tel: +34 900 123 456</p>
+            <p>&copy; 2024 SkyFlights. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
